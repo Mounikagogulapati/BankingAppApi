@@ -1,4 +1,6 @@
 ﻿using BankingApp.Interfaces.BL;
+using BankingApp.Interfaces.Repository;
+using BankingApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,14 @@ namespace BankApp.BL
 {
     public class BAccount : IBAccount
     {
-        public bool VerifyLogin()
+        private readonly IAccountRepository _accountRepository = null;
+        public BAccount(IAccountRepository accountRepository)
         {
-            throw new NotImplementedException();
+            _accountRepository = accountRepository;
+        }
+        public bool VerifyLogin(AccountLogin accountLogin)
+        {
+            return _accountRepository.VerifyLogin(accountLogin);
         }
     }
 }

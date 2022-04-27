@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BankingApp.DAL\BankingApp.DAL.csproj" />
     <ProjectReference Include="..\BankingApp.Interfaces\BankingApp.Interfaces.csproj" />
   </ItemGroup>
 

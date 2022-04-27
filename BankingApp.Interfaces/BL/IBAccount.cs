@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankingApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace BankingApp.Interfaces.BL
 {
     public interface IBAccount
     {
-        public bool VerifyLogin();
+        public bool VerifyLogin(AccountLogin accountLogin);
     }
 }
