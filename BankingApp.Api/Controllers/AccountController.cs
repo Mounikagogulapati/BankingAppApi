@@ -1,4 +1,5 @@
-﻿using BankingApp.Interfaces.BL;
+﻿using BankingApp.Api.Filters;
+using BankingApp.Interfaces.BL;
 using BankingApp.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,8 +16,9 @@ namespace BankingApp.Api.Controllers
             _bAccount = bAccount;
         }
 
+        [CustomAuthorizationFilter]
         [Route("AccLogin")]
-        [HttpPost]
+        [HttpPost]        
         public IActionResult AccLogin(AccountLogin accountLogin)
         {
             //BSmartMeter bSmartMeter = new BSmartMeter();

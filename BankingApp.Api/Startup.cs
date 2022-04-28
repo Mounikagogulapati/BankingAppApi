@@ -28,7 +28,7 @@ namespace BankingApp.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionString = Configuration.GetConnectionString("LeadTecDBConnection");
+            string connectionString = Configuration.GetConnectionString("DBConnection");
             services.AddScoped<IBAccount, BAccount>();
             services.AddScoped<IAccountRepository>(c => new AccountRepository(connectionString));
             services.AddControllers();

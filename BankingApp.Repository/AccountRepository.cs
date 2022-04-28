@@ -25,7 +25,7 @@ namespace BankingApp.Repository
             sqlParameters[0] = new SqlParameter("@can", login.AccountNo);
             sqlParameters[1] = new SqlParameter("@frmDate", login.UserName);
             sqlParameters[2] = new SqlParameter("@toDate", login.Password);
-            sqlParameters[3] = new SqlParameter("@toDate", login.isUserName);
+            sqlParameters[3] = new SqlParameter("@toDate", login.IsUserName);
             SqlHelper.ExecuteDataset(_conString, CommandType.StoredProcedure, "BankApp_VerifyLogin", sqlParameters);
             return true;
         }
