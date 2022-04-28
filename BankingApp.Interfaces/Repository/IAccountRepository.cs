@@ -10,5 +10,6 @@ namespace BankingApp.Interfaces.Repository
     public interface IAccountRepository
     {
         public bool VerifyLogin(AccountLogin accountLogin);
+        public bool Register(Account account);
     }
 }

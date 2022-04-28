@@ -19,6 +19,11 @@ namespace BankingApp.Repository
             _conString = conString;
         }
 
+        public bool Register(Account account)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool VerifyLogin(AccountLogin login)
         {
             SqlParameter[] sqlParameters = new SqlParameter[4];

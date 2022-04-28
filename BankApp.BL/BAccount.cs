@@ -16,6 +16,12 @@ namespace BankApp.BL
         {
             _accountRepository = accountRepository;
         }
+
+        public bool Register(Account account)
+        {
+            return _accountRepository.Register(account);
+        }
+
         public bool VerifyLogin(AccountLogin accountLogin)
         {
             return _accountRepository.VerifyLogin(accountLogin);

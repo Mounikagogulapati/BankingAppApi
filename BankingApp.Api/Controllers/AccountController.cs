@@ -16,13 +16,22 @@ namespace BankingApp.Api.Controllers
             _bAccount = bAccount;
         }
 
-        [CustomAuthorizationFilter]
         [Route("AccLogin")]
         [HttpPost]        
         public IActionResult AccLogin(AccountLogin accountLogin)
         {
             //BSmartMeter bSmartMeter = new BSmartMeter();
             var response = _bAccount.VerifyLogin(accountLogin);
+            return Ok(response);
+        }
+
+        [CustomAuthorizationFilter]
+        [Route("AccLogin")]
+        [HttpPost]
+        public IActionResult AccRegister(Account account)
+        {
+            //BSmartMeter bSmartMeter = new BSmartMeter();
+            var response = _bAccount.Register(account);
             return Ok(response);
         }
     }

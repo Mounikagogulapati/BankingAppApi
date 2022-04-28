@@ -10,5 +10,6 @@ namespace BankingApp.Interfaces.BL
     public interface IBAccount
     {
         public bool VerifyLogin(AccountLogin accountLogin);
+        public bool Register(Account account);
     }
 }
